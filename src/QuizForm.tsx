@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 
 
@@ -18,7 +16,7 @@ export default function QuizForm() {
   const [progress, setProgress] = React.useState(0);
   const [buffer, setBuffer] = React.useState(10);
 
-  const progressRef = React.useRef(() => {});
+  const progressRef = React.useRef(() => { });
   React.useEffect(() => {
     progressRef.current = () => {
       if (progress > 100) {
@@ -49,7 +47,7 @@ export default function QuizForm() {
 
       <div>
         <div >
-        <LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
+          <LinearProgress variant="buffer" value={progress} valueBuffer={buffer} />
         </div>
         <h1>問題文</h1>
         <Paper elevation={2} >ボクの名前は高倉稜、エムです。</Paper>
